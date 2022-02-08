@@ -5,8 +5,8 @@ public class Dealership {
     private ArrayList<Car> cars;
     private int till;
 
-    public Dealership(ArrayList<Car> cars, int till) {
-        this.cars = cars;
+    public Dealership(int till) {
+        this.cars = new ArrayList<>();
         this.till = till;
     }
 
@@ -22,5 +22,15 @@ public class Dealership {
         customer.buyCar(car);
         this.till += car.getPrice();
         this.cars.remove(car);
+    }
+
+    public void buyCar(Car car){
+        this.cars.add(car);
+        this.till -= car.getPrice();
+    }
+
+    public void repairCar(Car car){
+        this.till -= (car.getDamage() * 10);
+        car.repairDamage();
     }
 }

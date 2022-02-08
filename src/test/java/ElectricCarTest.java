@@ -44,4 +44,10 @@ public class ElectricCarTest {
     public void hasCarPrice(){
         assertEquals(12000, electricCar.getPrice());
     }
+
+    @Test
+    public void canDamage(){
+        electricCar.addDamage(10);
+        assertEquals(11900, electricCar.getPrice());
+    }
 }

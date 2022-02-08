@@ -5,9 +5,9 @@ public class Customer {
     private int money;
     private ArrayList<Car> cars;
 
-    public Customer(int money, ArrayList<Car> cars) {
+    public Customer(int money) {
         this.money = money;
-        this.cars = cars;
+        this.cars = new ArrayList<>();
     }
 
     public int getMoney() {
